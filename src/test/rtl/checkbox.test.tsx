@@ -4,6 +4,7 @@ import { it, expect } from "vitest";
 
 it("チェックボックスをクリックするとcheck状態が切り替わる", async () => {
   const { container } = render(<AddressForm />);
+  // testing-library/reactのgetbyroleを使う
   const checkbox = container.querySelector(
     'input[name="saveAddress"]'
   ) as HTMLInputElement;
