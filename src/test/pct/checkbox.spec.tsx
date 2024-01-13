@@ -5,7 +5,34 @@ test("チェックボックスをクリックするcheck状態が切り替わる
   mount,
 }) => {
   const component = await mount(<AddressForm />);
+  const start = performance.now();
   const checkbox = component.getByRole("checkbox");
+  const end = performance.now();
   await checkbox.click();
+  console.log("getbyrole:", end - start);
+  expect(checkbox).toBeChecked();
+});
+
+test("チェックボックスをクリックするcheck状態が切り替わる2", async ({
+  mount,
+}) => {
+  const component = await mount(<AddressForm />);
+  const start = performance.now();
+  const checkbox = component.getByRole("checkbox");
+  const end = performance.now();
+  await checkbox.click();
+  console.log("getbyrole:", end - start);
+  expect(checkbox).toBeChecked();
+});
+
+test("チェックボックスをクリックするcheck状態が切り替わる3", async ({
+  mount,
+}) => {
+  const component = await mount(<AddressForm />);
+  const start = performance.now();
+  const checkbox = component.getByRole("checkbox");
+  const end = performance.now();
+  await checkbox.click();
+  console.log("getbyrole:", end - start);
   expect(checkbox).toBeChecked();
 });

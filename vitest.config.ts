@@ -5,7 +5,9 @@ export default mergeConfig(
   viteConfig,
   defineConfig({
     test: {
+      globals: true,
       environment: "jsdom",
+      setupFiles: ["./testSetup.ts"],
       include: ["src/**/*.test.tsx"],
     },
   })
